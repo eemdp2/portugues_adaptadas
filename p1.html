@@ -13,7 +13,7 @@
             --BRANCO: #FFFFFF;
         }
 
-        @page { size: A4; margin: 8mm; }
+        @page { size: A4; margin: 5mm; }
         
         body {
             font-family: 'VERDANA', SANS-SERIF;
@@ -25,67 +25,73 @@
 
         .PAGE-CONTAINER {
             width: 100%;
-            min-height: 285mm;
+            height: 285mm; /* Travado no tamanho A4 */
             display: flex;
             flex-direction: column;
         }
 
         HEADER {
-            padding: 10px 20px;
+            padding: 8px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 2px solid var(--VERDE-FORTE);
         }
 
-        .HEADER-INFO { font-size: 10PT; font-weight: BOLD; line-height: 1.6; }
+        .HEADER-INFO { font-size: 10PT; font-weight: BOLD; line-height: 1.4; }
         
         .AVATAR-IMG {
-            width: 80px; height: 80px;
+            width: 70px; height: 70px;
             border-radius: 50%;
             border: 3px solid var(--OCRE);
             object-fit: cover;
         }
 
-        MAIN { flex-grow: 1; padding: 15px 25px; }
+        MAIN { flex-grow: 1; padding: 10px 25px; }
 
         H1 {
             color: var(--VERDE-FORTE);
-            font-size: 18PT;
+            font-size: 16PT;
             border-left: 6px solid var(--OCRE);
             padding-left: 12px;
-            margin-bottom: 15px;
+            margin: 0 0 10px 0;
         }
 
         .ROTULO {
-            font-size: 9PT;
+            font-size: 8PT;
             color: var(--MARROM);
-            margin-bottom: 4px;
+            margin-bottom: 2px;
             font-weight: BOLD;
         }
 
+        /* IMAGEM REDUZIDA PARA CABER O TEXTO */
         .FOTO-DESTAQUE-HORIZONTAL {
             width: 100%;
+            max-height: 140px; /* Reduzi a altura máxima */
             border: 3px solid var(--OCRE);
             border-radius: 12px;
-            margin-bottom: 20px;
+            margin-bottom: 12px;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .FOTO-DESTAQUE-HORIZONTAL img {
             width: 100%;
+            height: auto;
             display: block;
         }
 
         .BOX-ACAO {
             border: 2px solid var(--VERDE-FORTE);
             border-radius: 10px;
-            padding: 12px;
-            margin-bottom: 15px;
+            padding: 8px 12px;
+            margin-bottom: 8px;
         }
 
         .PERGUNTA-TEXTO {
-            font-size: 13PT;
+            font-size: 11PT;
             font-weight: BOLD;
             color: var(--PRETO);
             margin: 0;
@@ -105,17 +111,17 @@
         .OPCAO {
             display: BLOCK;
             border: 1px solid var(--MARROM);
-            padding: 12px;
-            margin-bottom: 8px;
+            padding: 10px;
+            margin-bottom: 5px;
             border-radius: 10px;
-            font-size: 12PT;
+            font-size: 10PT;
             font-weight: BOLD;
             color: var(--PRETO);
         }
 
         .ESPACO-DESENHO {
             width: 100%;
-            height: 180px;
+            height: 140px; /* Ajustado para não empurrar o rodapé */
             border: 2px DASHED var(--OCRE);
             border-radius: 10px;
             margin-top: 5px;
@@ -124,10 +130,10 @@
         FOOTER {
             margin-top: auto;
             text-align: CENTER;
-            padding-bottom: 15px;
+            padding-bottom: 10px;
         }
 
-        .LINHA-CORES { display: flex; height: 10px; width: 100%; margin-bottom: 10px; }
+        .LINHA-CORES { display: flex; height: 8px; width: 100%; margin-bottom: 5px; }
         .COR-1 { background-color: var(--VERDE-FORTE); flex: 1; }
         .COR-2 { background-color: var(--OCRE); flex: 1; }
         .COR-3 { background-color: var(--MARROM); flex: 1; }
@@ -147,7 +153,7 @@
         </header>
 
         <main>
-            <h1>ATIVIDADE: O TRABALHO DO REPÓRTER</h1>
+            <h1>O TRABALHO DO REPÓRTER</h1>
 
             <div class="FOTO-DESTAQUE-HORIZONTAL">
                 <img src="img/reporter.jpg" alt="REPÓRTER">
@@ -162,9 +168,7 @@
             <div class="OPCAO">( &nbsp; ) ELE BUSCA INFORMAÇÕES E DÁ NOTÍCIAS.</div>
             <div class="OPCAO">( &nbsp; ) ELE APENAS PASSEIA PELA CIDADE.</div>
 
-            <br>
-
-            <div class="BOX-ACAO">
+            <div class="BOX-ACAO" style="margin-top: 10px;">
                 <div class="ROTULO"># MEIOS DE COMUNICAÇÃO</div>
                 <p class="PERGUNTA-TEXTO">
                     2. <span class="ACAO-VERBO">ONDE</span> PODEMOS <span class="OBJETO-FINAL">VER UMA NOTÍCIA</span>?
@@ -173,9 +177,7 @@
             <div class="OPCAO">( &nbsp; ) NA TELEVISÃO OU NO CELULAR.</div>
             <div class="OPCAO">( &nbsp; ) EM UM LIVRO DE RECEITAS.</div>
 
-            <br>
-
-            <div class="BOX-ACAO">
+            <div class="BOX-ACAO" style="margin-top: 10px;">
                 <div class="ROTULO"># PRODUÇÃO VISUAL</div>
                 <p class="PERGUNTA-TEXTO">
                     3. <span class="ACAO-VERBO">DESENHE</span> VOCÊ COMO UM <span class="OBJETO-FINAL">REPÓRTER</span>:
@@ -186,7 +188,7 @@
 
         <footer>
             <div class="LINHA-CORES"><div class="COR-1"></div><div class="COR-2"></div><div class="COR-3"></div></div>
-            <div style="font-weight: BOLD; font-size: 10PT;">WWW.LEONARDOPORTAL.COM | MATERIAIS PEDAGÓGICOS GRATUITOS</div>
+            <div style="font-weight: BOLD; font-size: 9PT;">WWW.LEONARDOPORTAL.COM</div>
         </footer>
     </div>
 
