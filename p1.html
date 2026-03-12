@@ -2,136 +2,138 @@
 <html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
-    <title>ATIVIDADE ADAPTADA - LEONARDO PORTAL</title>
+    <title>P1 - ATIVIDADE ADAPTADA</title>
     <style>
         :root {
-            --VERDE: #76A312;
+            --VERDE-FORTE: #76A312;
+            --VERDE-CLARO: #E8F5E9;
             --OCRE: #D4A34D;
             --MARROM: #634F3D;
             --PRETO: #000000;
             --BRANCO: #FFFFFF;
         }
 
-        @page { size: A4; margin: 10mm; }
+        @page { size: A4; margin: 8mm; }
         
         body {
             font-family: 'VERDANA', SANS-SERIF;
             margin: 0; padding: 0;
             background-color: var(--BRANCO);
             text-transform: UPPERCASE;
+            color: var(--PRETO);
         }
 
         .PAGE-CONTAINER {
             width: 100%;
-            min-height: 280mm;
+            min-height: 285mm;
             display: flex;
             flex-direction: column;
-            border: 1px solid #EEE;
         }
 
-        /* CABEÇALHO */
         HEADER {
-            padding: 15px 20px;
+            padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 2px solid var(--VERDE);
+            border-bottom: 2px solid var(--VERDE-FORTE);
         }
 
-        .HEADER-INFO { font-size: 11PT; font-weight: BOLD; line-height: 1.8; color: var(--MARROM); }
+        .HEADER-INFO { font-size: 10PT; font-weight: BOLD; line-height: 1.6; }
         
         .AVATAR-IMG {
-            width: 90px; height: 90px;
+            width: 80px; height: 80px;
             border-radius: 50%;
             border: 3px solid var(--OCRE);
             object-fit: cover;
         }
 
-        MAIN { flex-grow: 1; padding: 25px; }
+        MAIN { flex-grow: 1; padding: 15px 25px; }
 
         H1 {
-            color: var(--VERDE);
-            text-align: LEFT;
-            font-size: 20PT;
-            border-left: 8px solid var(--OCRE);
-            padding-left: 15px;
-            margin-bottom: 30px;
+            color: var(--VERDE-FORTE);
+            font-size: 18PT;
+            border-left: 6px solid var(--OCRE);
+            padding-left: 12px;
+            margin-bottom: 15px;
         }
 
-        /* BOX DE INSTRUÇÃO */
-        .BOX-ACAO {
-            border: 3px solid var(--VERDE);
+        .ROTULO {
+            font-size: 9PT;
+            color: var(--MARROM);
+            margin-bottom: 4px;
+            font-weight: BOLD;
+        }
+
+        .FOTO-DESTAQUE-HORIZONTAL {
+            width: 100%;
+            border: 3px solid var(--OCRE);
             border-radius: 12px;
-            padding: 15px;
             margin-bottom: 20px;
+            overflow: hidden;
         }
 
-        /* ESTILOS DE DESTAQUE SOLICITADOS */
-        .ACAO-VERBO {
-            background-color: var(--VERDE);
-            color: var(--BRANCO);
-            padding: 2px 8px;
-            border-radius: 5px;
-            display: inline-block;
+        .FOTO-DESTAQUE-HORIZONTAL img {
+            width: 100%;
+            display: block;
         }
 
-        .OBJETO-FINAL {
-            border-bottom: 5px solid var(--OCRE);
-            padding-bottom: 2px;
-            display: inline-block;
+        .BOX-ACAO {
+            border: 2px solid var(--VERDE-FORTE);
+            border-radius: 10px;
+            padding: 12px;
+            margin-bottom: 15px;
         }
 
         .PERGUNTA-TEXTO {
-            font-size: 16PT;
+            font-size: 13PT;
             font-weight: BOLD;
             color: var(--PRETO);
-            line-height: 1.8;
             margin: 0;
         }
 
-        /* RESPOSTAS */
+        .ACAO-VERBO {
+            background-color: var(--VERDE-CLARO);
+            padding: 2px 6px;
+            border: 1px solid var(--VERDE-FORTE);
+            border-radius: 4px;
+        }
+
+        .OBJETO-FINAL {
+            border-bottom: 4px solid var(--OCRE);
+        }
+
         .OPCAO {
             display: BLOCK;
-            border: 2px solid var(--MARROM);
-            padding: 15px;
-            margin-bottom: 12px;
+            border: 1px solid var(--MARROM);
+            padding: 12px;
+            margin-bottom: 8px;
             border-radius: 10px;
-            font-size: 14PT;
+            font-size: 12PT;
             font-weight: BOLD;
+            color: var(--PRETO);
         }
 
         .ESPACO-DESENHO {
             width: 100%;
-            height: 250px;
+            height: 160px;
             border: 2px DASHED var(--OCRE);
             border-radius: 10px;
-            margin-top: 10px;
+            margin-top: 5px;
         }
 
-        /* RODAPÉ MULTICOLORIDO */
         FOOTER {
             margin-top: auto;
             text-align: CENTER;
             padding-bottom: 15px;
         }
 
-        .LINHA-CORES {
-            display: flex; height: 10px; width: 100%; margin-bottom: 10px;
-        }
-        .COR-1 { background-color: var(--VERDE); flex: 1; }
+        .LINHA-CORES { display: flex; height: 10px; width: 100%; margin-bottom: 10px; }
+        .COR-1 { background-color: var(--VERDE-FORTE); flex: 1; }
         .COR-2 { background-color: var(--OCRE); flex: 1; }
         .COR-3 { background-color: var(--MARROM); flex: 1; }
 
-        .FOOTER-TEXT { font-size: 11PT; font-weight: BOLD; color: var(--MARROM); }
-
-        /* BOTÃO IMPRIMIR */
-        .BTN-PRINT {
-            position: FIXED; bottom: 20PX; right: 20PX;
-            background: var(--VERDE); color: WHITE; padding: 15PX 25PX;
-            border: NONE; border-radius: 50PX; cursor: POINTER; font-weight: BOLD;
-        }
-
-        @media print { .BTN-PRINT { display: none; } }
+        /* Esconde botões caso existam */
+        .BTN-PRINT, button { display: none !important; }
     </style>
 </head>
 <body>
@@ -140,47 +142,53 @@
         <header>
             <div class="HEADER-INFO">
                 NOME: __________________________________________<br>
-                DATA: ____/____/____
+                DATA: ____/____/____ | HABILIDADE: (EF69LP06)
             </div>
-            <img src="https://lh3.googleusercontent.com/a-/AIdro_nUu9F_nqOOyO4BRzzlyyztxVLTvuR0sL8bIbz-MNcitrjr=s900" alt="AVATAR" class="AVATAR-IMG">
+            <img src="img/avatar.jpg" alt="AVATAR" class="AVATAR-IMG">
         </header>
 
         <main>
             <h1>ATIVIDADE: NOTÍCIA E IMAGEM</h1>
 
-            <div class="BOX-ACAO">
-                <p class="PERGUNTA-TEXTO">
-                    <span class="ACAO-VERBO">MARQUE</span> ONDE VOCÊ VÊ A <span class="OBJETO-FINAL">NOTÍCIA DE HOJE</span>:
-                </p>
+            <div class="FOTO-DESTAQUE-HORIZONTAL">
+                <img src="img/reporter.jpg" alt="REPÓRTER">
             </div>
 
-            <div class="OPCAO">( &nbsp;&nbsp; ) NO CELULAR.</div>
-            <div class="OPCAO">( &nbsp;&nbsp; ) NO JORNAL DE PAPEL.</div>
+            <div class="BOX-ACAO">
+                <div class="ROTULO"># LEITURA</div>
+                <p class="PERGUNTA-TEXTO">O QUE VOCÊ VÊ NA NOTÍCIA DE HOJE?</p>
+            </div>
+
+            <div class="OPCAO">( &nbsp; ) UMA NOTÍCIA NO CELULAR.</div>
+            <div class="OPCAO">( &nbsp; ) UMA NOTÍCIA NO PAPEL.</div>
 
             <br>
 
-            <div class="BOX-ACAO" style="border-color: var(--OCRE);">
+            <div class="BOX-ACAO">
+                <div class="ROTULO"># LEITURA E MARCAÇÃO</div>
+                <p class="PERGUNTA-TEXTO">
+                    1. <span class="ACAO-VERBO">MARQUE</span> O QUE UM <span class="OBJETO-FINAL">REPÓRTER FAZ</span>:
+                </p>
+            </div>
+            <div class="OPCAO">( &nbsp; ) CONTA UMA NOTÍCIA PARA AS PESSOAS.</div>
+            <div class="OPCAO">( &nbsp; ) DORME O DIA TODO NA SALA.</div>
+
+            <br>
+
+            <div class="BOX-ACAO">
+                <div class="ROTULO"># DESENHO</div>
                 <p class="PERGUNTA-TEXTO">
                     <span class="ACAO-VERBO">DESENHE</span> O QUE VOCÊ MAIS <span class="OBJETO-FINAL">GOSTA DE LER</span>:
                 </p>
             </div>
-            
             <div class="ESPACO-DESENHO"></div>
         </main>
 
         <footer>
-            <div class="LINHA-CORES">
-                <div class="COR-1"></div>
-                <div class="COR-2"></div>
-                <div class="COR-3"></div>
-            </div>
-            <div class="FOOTER-TEXT">
-                WWW.LEONARDOPORTAL.COM | MATERIAIS PEDAGÓGICOS GRATUITOS
-            </div>
+            <div class="LINHA-CORES"><div class="COR-1"></div><div class="COR-2"></div><div class="COR-3"></div></div>
+            <div style="font-weight: BOLD; font-size: 10PT;">WWW.LEONARDOPORTAL.COM | MATERIAIS PEDAGÓGICOS GRATUITOS</div>
         </footer>
     </div>
-
-    <button class="BTN-PRINT" onclick="window.print()">🖨️ IMPRIMIR MATERIAL</button>
 
 </body>
 </html>
