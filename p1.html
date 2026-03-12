@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>ATIVIDADE ADAPTADA - LEONARDO PORTAL</title>
+    <style>
+        :root {
+            --VERDE: #76A312;
+            --OCRE: #D4A34D;
+            --MARROM: #634F3D;
+            --PRETO: #000000;
+            --BRANCO: #FFFFFF;
+        }
+
+        @page { size: A4; margin: 10mm; }
+        
+        body {
+            font-family: 'VERDANA', SANS-SERIF;
+            margin: 0; padding: 0;
+            background-color: var(--BRANCO);
+            text-transform: UPPERCASE;
+        }
+
+        .PAGE-CONTAINER {
+            width: 100%;
+            min-height: 280mm;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #EEE;
+        }
+
+        /* CABEÇALHO */
+        HEADER {
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--VERDE);
+        }
+
+        .HEADER-INFO { font-size: 11PT; font-weight: BOLD; line-height: 1.8; color: var(--MARROM); }
+        
+        .AVATAR-IMG {
+            width: 90px; height: 90px;
+            border-radius: 50%;
+            border: 3px solid var(--OCRE);
+            object-fit: cover;
+        }
+
+        MAIN { flex-grow: 1; padding: 25px; }
+
+        H1 {
+            color: var(--VERDE);
+            text-align: LEFT;
+            font-size: 20PT;
+            border-left: 8px solid var(--OCRE);
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+
+        /* BOX DE INSTRUÇÃO */
+        .BOX-ACAO {
+            border: 3px solid var(--VERDE);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* ESTILOS DE DESTAQUE SOLICITADOS */
+        .ACAO-VERBO {
+            background-color: var(--VERDE);
+            color: var(--BRANCO);
+            padding: 2px 8px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .OBJETO-FINAL {
+            border-bottom: 5px solid var(--OCRE);
+            padding-bottom: 2px;
+            display: inline-block;
+        }
+
+        .PERGUNTA-TEXTO {
+            font-size: 16PT;
+            font-weight: BOLD;
+            color: var(--PRETO);
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        /* RESPOSTAS */
+        .OPCAO {
+            display: BLOCK;
+            border: 2px solid var(--MARROM);
+            padding: 15px;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            font-size: 14PT;
+            font-weight: BOLD;
+        }
+
+        .ESPACO-DESENHO {
+            width: 100%;
+            height: 250px;
+            border: 2px DASHED var(--OCRE);
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        /* RODAPÉ MULTICOLORIDO */
+        FOOTER {
+            margin-top: auto;
+            text-align: CENTER;
+            padding-bottom: 15px;
+        }
+
+        .LINHA-CORES {
+            display: flex; height: 10px; width: 100%; margin-bottom: 10px;
+        }
+        .COR-1 { background-color: var(--VERDE); flex: 1; }
+        .COR-2 { background-color: var(--OCRE); flex: 1; }
+        .COR-3 { background-color: var(--MARROM); flex: 1; }
+
+        .FOOTER-TEXT { font-size: 11PT; font-weight: BOLD; color: var(--MARROM); }
+
+        /* BOTÃO IMPRIMIR */
+        .BTN-PRINT {
+            position: FIXED; bottom: 20PX; right: 20PX;
+            background: var(--VERDE); color: WHITE; padding: 15PX 25PX;
+            border: NONE; border-radius: 50PX; cursor: POINTER; font-weight: BOLD;
+        }
+
+        @media print { .BTN-PRINT { display: none; } }
+    </style>
+</head>
+<body>
+
+    <div class="PAGE-CONTAINER">
+        <header>
+            <div class="HEADER-INFO">
+                NOME: __________________________________________<br>
+                DATA: ____/____/____
+            </div>
+            <img src="https://lh3.googleusercontent.com/a-/AIdro_nUu9F_nqOOyO4BRzzlyyztxVLTvuR0sL8bIbz-MNcitrjr=s900" alt="AVATAR" class="AVATAR-IMG">
+        </header>
+
+        <main>
+            <h1>ATIVIDADE: NOTÍCIA E IMAGEM</h1>
+
+            <div class="BOX-ACAO">
+                <p class="PERGUNTA-TEXTO">
+                    <span class="ACAO-VERBO">MARQUE</span> ONDE VOCÊ VÊ A <span class="OBJETO-FINAL">NOTÍCIA DE HOJE</span>:
+                </p>
+            </div>
+
+            <div class="OPCAO">( &nbsp;&nbsp; ) NO CELULAR.</div>
+            <div class="OPCAO">( &nbsp;&nbsp; ) NO JORNAL DE PAPEL.</div>
+
+            <br>
+
+            <div class="BOX-ACAO" style="border-color: var(--OCRE);">
+                <p class="PERGUNTA-TEXTO">
+                    <span class="ACAO-VERBO">DESENHE</span> O QUE VOCÊ MAIS <span class="OBJETO-FINAL">GOSTA DE LER</span>:
+                </p>
+            </div>
+            
+            <div class="ESPACO-DESENHO"></div>
+        </main>
+
+        <footer>
+            <div class="LINHA-CORES">
+                <div class="COR-1"></div>
+                <div class="COR-2"></div>
+                <div class="COR-3"></div>
+            </div>
+            <div class="FOOTER-TEXT">
+                WWW.LEONARDOPORTAL.COM | MATERIAIS PEDAGÓGICOS GRATUITOS
+            </div>
+        </footer>
+    </div>
+
+    <button class="BTN-PRINT" onclick="window.print()">🖨️ IMPRIMIR MATERIAL</button>
+
+</body>
+</html>
