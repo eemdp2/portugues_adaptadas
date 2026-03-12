@@ -13,7 +13,7 @@
             --BRANCO: #FFFFFF;
         }
 
-        @page { size: A4; margin: 8mm; }
+        @page { size: A4; margin: 5mm; }
         
         body {
             font-family: 'VERDANA', SANS-SERIF;
@@ -25,67 +25,73 @@
 
         .PAGE-CONTAINER {
             width: 100%;
-            min-height: 285mm;
+            height: 285mm;
             display: flex;
             flex-direction: column;
         }
 
         HEADER {
-            padding: 10px 20px;
+            padding: 8px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 2px solid var(--VERDE-FORTE);
         }
 
-        .HEADER-INFO { font-size: 10PT; font-weight: BOLD; line-height: 1.6; }
+        .HEADER-INFO { font-size: 10PT; font-weight: BOLD; line-height: 1.4; }
         
         .AVATAR-IMG {
-            width: 80px; height: 80px;
+            width: 70px; height: 70px;
             border-radius: 50%;
             border: 3px solid var(--OCRE);
             object-fit: cover;
         }
 
-        MAIN { flex-grow: 1; padding: 15px 25px; }
+        MAIN { flex-grow: 1; padding: 10px 25px; }
 
         H1 {
             color: var(--VERDE-FORTE);
-            font-size: 18PT;
+            font-size: 16PT;
             border-left: 6px solid var(--OCRE);
             padding-left: 12px;
-            margin-bottom: 15px;
+            margin: 0 0 10px 0;
         }
 
         .ROTULO {
-            font-size: 9PT;
+            font-size: 8PT;
             color: var(--MARROM);
-            margin-bottom: 4px;
+            margin-bottom: 2px;
             font-weight: BOLD;
         }
 
+        /* IMAGEM REDUZIDA CONFORME P1 */
         .FOTO-DESTAQUE-HORIZONTAL {
             width: 100%;
+            max-height: 140px;
             border: 3px solid var(--OCRE);
             border-radius: 12px;
-            margin-bottom: 20px;
+            margin-bottom: 12px;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .FOTO-DESTAQUE-HORIZONTAL img {
             width: 100%;
+            height: auto;
             display: block;
         }
 
         .BOX-ACAO {
             border: 2px solid var(--VERDE-FORTE);
             border-radius: 10px;
-            padding: 12px;
-            margin-bottom: 15px;
+            padding: 8px 12px;
+            margin-bottom: 8px;
         }
 
         .PERGUNTA-TEXTO {
-            font-size: 13PT;
+            font-size: 11PT;
             font-weight: BOLD;
             color: var(--PRETO);
             margin: 0;
@@ -105,27 +111,27 @@
         .OPCAO {
             display: BLOCK;
             border: 1px solid var(--MARROM);
-            padding: 12px;
-            margin-bottom: 8px;
+            padding: 10px;
+            margin-bottom: 5px;
             border-radius: 10px;
-            font-size: 12PT;
+            font-size: 10PT;
             font-weight: BOLD;
             color: var(--PRETO);
         }
 
         .LINHA-PONTILHADA {
             border-bottom: 1px dotted var(--MARROM);
-            height: 35px;
-            margin-bottom: 10px;
+            height: 30px;
+            margin-bottom: 5px;
         }
 
         FOOTER {
             margin-top: auto;
             text-align: CENTER;
-            padding-bottom: 15px;
+            padding-bottom: 10px;
         }
 
-        .LINHA-CORES { display: flex; height: 10px; width: 100%; margin-bottom: 10px; }
+        .LINHA-CORES { display: flex; height: 8px; width: 100%; margin-bottom: 5px; }
         .COR-1 { background-color: var(--VERDE-FORTE); flex: 1; }
         .COR-2 { background-color: var(--OCRE); flex: 1; }
         .COR-3 { background-color: var(--MARROM); flex: 1; }
@@ -153,30 +159,26 @@
 
             <div class="BOX-ACAO">
                 <div class="ROTULO"># OBSERVAÇÃO</div>
-                <p class="PERGUNTA-TEXTO">A <span class="OBJETO-FINAL">FOTORREPORTAGEM</span> USA IMAGENS PARA CONTAR UMA HISTÓRIA.</p>
+                <p class="PERGUNTA-TEXTO">A <span class="OBJETO-FINAL">FOTORREPORTAGEM</span> CONTA UMA HISTÓRIA COM FOTOS.</p>
             </div>
 
             <div class="BOX-ACAO">
                 <div class="ROTULO"># MARCAÇÃO</div>
-                <p class="PERGUNTA-TEXTO">1. <span class="ACAO-VERBO">MARQUE</span> O QUE VAI ABAIXO DA FOTO:</p>
+                <p class="PERGUNTA-TEXTO">1. <span class="ACAO-VERBO">MARQUE</span> O QUE EXPLICA A FOTO:</p>
             </div>
-            <div class="OPCAO">( &nbsp; ) UMA LEGENDA EXPLICANDO A FOTO.</div>
-            <div class="OPCAO">( &nbsp; ) UMA RECEITA DE BOLO.</div>
+            <div class="OPCAO">( &nbsp; ) UMA LEGENDA COM TEXTO CURTO.</div>
+            <div class="OPCAO">( &nbsp; ) UM DESENHO DE FRUTAS.</div>
 
-            <br>
-
-            <div class="BOX-ACAO">
+            <div class="BOX-ACAO" style="margin-top: 10px;">
                 <div class="ROTULO"># ESCRITA</div>
-                <p class="PERGUNTA-TEXTO">2. <span class="ACAO-VERBO">ESCREVA</span> UMA LEGENDA PARA A NOTÍCIA: <br><small>"ALUNOS NO JARDIM DA ESCOLA"</small></p>
+                <p class="PERGUNTA-TEXTO">2. <span class="ACAO-VERBO">ESCREVA</span> UMA LEGENDA PARA UMA FOTO DA <span class="OBJETO-FINAL">ESCOLA</span>:</p>
             </div>
             <div class="LINHA-PONTILHADA"></div>
             <div class="LINHA-PONTILHADA"></div>
 
-            <br>
-
-            <div class="BOX-ACAO">
+            <div class="BOX-ACAO" style="margin-top: 10px;">
                 <div class="ROTULO"># OPINIÃO</div>
-                <p class="PERGUNTA-TEXTO">3. <span class="ACAO-VERBO">VOCÊ GOSTA</span> DE VER FOTOS NAS NOTÍCIAS?</p>
+                <p class="PERGUNTA-TEXTO">3. <span class="ACAO-VERBO">VOCÊ GOSTA</span> DE NOTÍCIAS COM FOTOS?</p>
             </div>
             <div style="display: flex; gap: 10px;">
                 <div class="OPCAO" style="flex: 1; text-align: center;">SIM</div>
@@ -187,7 +189,7 @@
 
         <footer>
             <div class="LINHA-CORES"><div class="COR-1"></div><div class="COR-2"></div><div class="COR-3"></div></div>
-            <div style="font-weight: BOLD; font-size: 10PT;">WWW.LEONARDOPORTAL.COM | MATERIAIS PEDAGÓGICOS GRATUITOS</div>
+            <div style="font-weight: BOLD; font-size: 9PT;">WWW.LEONARDOPORTAL.COM</div>
         </footer>
     </div>
 
