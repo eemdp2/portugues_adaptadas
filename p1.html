@@ -2,7 +2,7 @@
 <html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
-    <title>P1 - ATIVIDADE ADAPTADA</title>
+    <title>P1 - ATIVIDADE INCLUSIVA</title>
     <style>
         :root {
             --VERDE-FORTE: #76A312;
@@ -16,16 +16,18 @@
         @page { size: A4; margin: 5mm; }
         
         body {
-            font-family: 'VERDANA', SANS-SERIF;
+            /* Verdana é ideal para dislexia pela clareza das formas */
+            font-family: 'Verdana', sans-serif;
             margin: 0; padding: 0;
             background-color: var(--BRANCO);
-            text-transform: UPPERCASE;
+            text-transform: uppercase;
             color: var(--PRETO);
+            letter-spacing: 1px; /* Melhora a decodificação das palavras */
         }
 
         .PAGE-CONTAINER {
             width: 100%;
-            height: 285mm; /* Travado no tamanho A4 */
+            height: 285mm;
             display: flex;
             flex-direction: column;
         }
@@ -38,7 +40,7 @@
             border-bottom: 2px solid var(--VERDE-FORTE);
         }
 
-        .HEADER-INFO { font-size: 10PT; font-weight: BOLD; line-height: 1.4; }
+        .HEADER-INFO { font-size: 10pt; font-weight: bold; line-height: 1.5; }
         
         .AVATAR-IMG {
             width: 70px; height: 70px;
@@ -51,26 +53,19 @@
 
         H1 {
             color: var(--VERDE-FORTE);
-            font-size: 16PT;
+            font-size: 16pt;
             border-left: 6px solid var(--OCRE);
             padding-left: 12px;
-            margin: 0 0 10px 0;
+            margin-bottom: 12px;
         }
 
-        .ROTULO {
-            font-size: 8PT;
-            color: var(--MARROM);
-            margin-bottom: 2px;
-            font-weight: BOLD;
-        }
-
-        /* IMAGEM REDUZIDA PARA CABER O TEXTO */
+        /* IMAGEM COM TAMANHO CONTROLADO PARA DAR ESPAÇO AO TEXTO */
         .FOTO-DESTAQUE-HORIZONTAL {
             width: 100%;
-            max-height: 200px; /* Reduzi a altura máxima */
-            border: 3px solid var(--OCRE);
+            max-height: 130px;
+            border: 2px solid var(--OCRE);
             border-radius: 12px;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             overflow: hidden;
             display: flex;
             align-items: center;
@@ -83,23 +78,33 @@
             display: block;
         }
 
-        .BOX-ACAO {
+        /* BLOCO DE QUESTÃO (ÂNCOVA VISUAL PARA TDAH) */
+        .BLOCO-QUESTAO {
             border: 2px solid var(--VERDE-FORTE);
-            border-radius: 10px;
-            padding: 8px 12px;
-            margin-bottom: 8px;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fdfdfd;
+        }
+
+        .ROTULO {
+            font-size: 8pt;
+            color: var(--MARROM);
+            margin-bottom: 6px;
+            font-weight: bold;
         }
 
         .PERGUNTA-TEXTO {
-            font-size: 11PT;
-            font-weight: BOLD;
+            font-size: 11pt;
+            font-weight: bold;
             color: var(--PRETO);
-            margin: 0;
+            margin: 0 0 12px 0;
+            line-height: 1.4;
         }
 
         .ACAO-VERBO {
             background-color: var(--VERDE-CLARO);
-            padding: 2px 6px;
+            padding: 2px 8px;
             border: 1px solid var(--VERDE-FORTE);
             border-radius: 4px;
         }
@@ -108,28 +113,31 @@
             border-bottom: 4px solid var(--OCRE);
         }
 
+        /* OPÇÕES COM BORDA CINZA (MENOS RUÍDO VISUAL) */
         .OPCAO {
-            display: BLOCK;
-            border: 1px solid var(--MARROM);
-            padding: 10px;
-            margin-bottom: 5px;
+            display: block;
+            border: 1.5px solid #D1D1D1;
+            padding: 10px 15px;
+            margin-top: 8px;
             border-radius: 10px;
-            font-size: 10PT;
-            font-weight: BOLD;
+            font-size: 10pt;
+            font-weight: bold;
             color: var(--PRETO);
+            background-color: var(--BRANCO);
         }
 
         .ESPACO-DESENHO {
             width: 100%;
-            height: 300px; /* Ajustado para não empurrar o rodapé */
-            border: 2px DASHED var(--OCRE);
+            height: 130px;
+            border: 2px dashed var(--OCRE);
             border-radius: 10px;
             margin-top: 5px;
+            background-color: var(--BRANCO);
         }
 
         FOOTER {
             margin-top: auto;
-            text-align: CENTER;
+            text-align: center;
             padding-bottom: 10px;
         }
 
@@ -138,7 +146,7 @@
         .COR-2 { background-color: var(--OCRE); flex: 1; }
         .COR-3 { background-color: var(--MARROM); flex: 1; }
 
-        .BTN-PRINT, button { display: none !important; }
+        button { display: none !important; }
     </style>
 </head>
 <body>
@@ -159,36 +167,36 @@
                 <img src="img/reporter.jpg" alt="REPÓRTER">
             </div>
 
-            <div class="BOX-ACAO">
+            <div class="BLOCO-QUESTAO">
                 <div class="ROTULO"># FUNÇÃO SOCIAL</div>
                 <p class="PERGUNTA-TEXTO">
                     1. <span class="ACAO-VERBO">MARQUE</span> O QUE O <span class="OBJETO-FINAL">REPÓRTER FAZ</span>:
                 </p>
+                <div class="OPCAO">( &nbsp; ) BUSCA INFORMAÇÕES E DÁ NOTÍCIAS.</div>
+                <div class="OPCAO">( &nbsp; ) APENAS PASSEIA PELA CIDADE.</div>
             </div>
-            <div class="OPCAO">( &nbsp; ) ELE BUSCA INFORMAÇÕES E DÁ NOTÍCIAS.</div>
-            <div class="OPCAO">( &nbsp; ) ELE APENAS PASSEIA PELA CIDADE.</div>
 
-            <div class="BOX-ACAO" style="margin-top: 10px;">
-                <div class="ROTULO"># MEIOS DE COMUNICAÇÃO</div>
+            <div class="BLOCO-QUESTAO">
+                <div class="ROTULO"># COMUNICAÇÃO</div>
                 <p class="PERGUNTA-TEXTO">
                     2. <span class="ACAO-VERBO">ONDE</span> PODEMOS <span class="OBJETO-FINAL">VER UMA NOTÍCIA</span>?
                 </p>
+                <div class="OPCAO">( &nbsp; ) NA TELEVISÃO OU NO CELULAR.</div>
+                <div class="OPCAO">( &nbsp; ) EM UM LIVRO DE RECEITAS.</div>
             </div>
-            <div class="OPCAO">( &nbsp; ) NA TELEVISÃO OU NO CELULAR.</div>
-            <div class="OPCAO">( &nbsp; ) EM UM LIVRO DE RECEITAS.</div>
 
-            <div class="BOX-ACAO" style="margin-top: 10px;">
+            <div class="BLOCO-QUESTAO">
                 <div class="ROTULO"># PRODUÇÃO VISUAL</div>
                 <p class="PERGUNTA-TEXTO">
                     3. <span class="ACAO-VERBO">DESENHE</span> VOCÊ COMO UM <span class="OBJETO-FINAL">REPÓRTER</span>:
                 </p>
+                <div class="ESPACO-DESENHO"></div>
             </div>
-            <div class="ESPACO-DESENHO"></div>
         </main>
 
         <footer>
             <div class="LINHA-CORES"><div class="COR-1"></div><div class="COR-2"></div><div class="COR-3"></div></div>
-            <div style="font-weight: BOLD; font-size: 9PT;">WWW.LEONARDOPORTAL.COM</div>
+            <div style="font-weight: bold; font-size: 9pt;">WWW.LEONARDOPORTAL.COM</div>
         </footer>
     </div>
 
