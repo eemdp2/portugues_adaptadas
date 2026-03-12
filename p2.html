@@ -2,7 +2,7 @@
 <html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
-    <title>P2 - ATIVIDADE ADAPTADA</title>
+    <title>P2 - ATIVIDADE INCLUSIVA</title>
     <style>
         :root {
             --VERDE-FORTE: #76A312;
@@ -16,11 +16,13 @@
         @page { size: A4; margin: 5mm; }
         
         body {
-            font-family: 'VERDANA', SANS-SERIF;
+            /* Verdana é uma das melhores fontes para disléxicos pela largura das letras */
+            font-family: 'Verdana', sans-serif;
             margin: 0; padding: 0;
             background-color: var(--BRANCO);
-            text-transform: UPPERCASE;
+            text-transform: uppercase;
             color: var(--PRETO);
+            letter-spacing: 1px; /* Melhora a leitura para dislexia */
         }
 
         .PAGE-CONTAINER {
@@ -38,7 +40,7 @@
             border-bottom: 2px solid var(--VERDE-FORTE);
         }
 
-        .HEADER-INFO { font-size: 10PT; font-weight: BOLD; line-height: 1.4; }
+        .HEADER-INFO { font-size: 10pt; font-weight: bold; line-height: 1.5; }
         
         .AVATAR-IMG {
             width: 70px; height: 70px;
@@ -51,26 +53,19 @@
 
         H1 {
             color: var(--VERDE-FORTE);
-            font-size: 16PT;
+            font-size: 16pt;
             border-left: 6px solid var(--OCRE);
             padding-left: 12px;
-            margin: 0 0 10px 0;
+            margin-bottom: 12px;
         }
 
-        .ROTULO {
-            font-size: 8PT;
-            color: var(--MARROM);
-            margin-bottom: 2px;
-            font-weight: BOLD;
-        }
-
-        /* IMAGEM REDUZIDA CONFORME P1 */
+        /* IMAGEM COM ALTURA CONTROLADA */
         .FOTO-DESTAQUE-HORIZONTAL {
             width: 100%;
             max-height: 200px;
-            border: 3px solid var(--OCRE);
+            border: 2px solid var(--OCRE);
             border-radius: 12px;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             overflow: hidden;
             display: flex;
             align-items: center;
@@ -83,23 +78,33 @@
             display: block;
         }
 
-        .BOX-ACAO {
+        /* RETÂNGULO DA QUESTÃO (PARA TDAH) */
+        .BLOCO-QUESTAO {
             border: 2px solid var(--VERDE-FORTE);
-            border-radius: 10px;
-            padding: 8px 12px;
-            margin-bottom: 8px;
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: #fdfdfd;
+        }
+
+        .ROTULO {
+            font-size: 8pt;
+            color: var(--MARROM);
+            margin-bottom: 6px;
+            font-weight: bold;
         }
 
         .PERGUNTA-TEXTO {
-            font-size: 11PT;
-            font-weight: BOLD;
+            font-size: 11pt;
+            font-weight: bold;
             color: var(--PRETO);
-            margin: 0;
+            margin: 0 0 12px 0;
+            line-height: 1.4;
         }
 
         .ACAO-VERBO {
             background-color: var(--VERDE-CLARO);
-            padding: 2px 6px;
+            padding: 2px 8px;
             border: 1px solid var(--VERDE-FORTE);
             border-radius: 4px;
         }
@@ -108,26 +113,29 @@
             border-bottom: 4px solid var(--OCRE);
         }
 
+        /* ALTERNATIVAS COM BORDA SUAVE (PARA DISLEXIA/TDAH) */
         .OPCAO {
-            display: BLOCK;
-            border: 1px solid var(--MARROM);
-            padding: 10px;
-            margin-bottom: 5px;
+            display: block;
+            border: 1.5px solid #D1D1D1; /* Borda cinza suave para não cansar */
+            padding: 10px 15px;
+            margin-top: 8px;
             border-radius: 10px;
-            font-size: 10PT;
-            font-weight: BOLD;
+            font-size: 10pt;
+            font-weight: bold;
             color: var(--PRETO);
+            background-color: var(--BRANCO);
+            transition: background 0.3s;
         }
 
         .LINHA-PONTILHADA {
-            border-bottom: 1px dotted var(--MARROM);
-            height: 30px;
-            margin-bottom: 5px;
+            border-bottom: 2px dotted var(--MARROM);
+            height: 35px;
+            margin-top: 5px;
         }
 
         FOOTER {
             margin-top: auto;
-            text-align: CENTER;
+            text-align: center;
             padding-bottom: 10px;
         }
 
@@ -136,7 +144,7 @@
         .COR-2 { background-color: var(--OCRE); flex: 1; }
         .COR-3 { background-color: var(--MARROM); flex: 1; }
 
-        .BTN-PRINT, button { display: none !important; }
+        button { display: none !important; }
     </style>
 </head>
 <body>
@@ -157,39 +165,39 @@
                 <img src="img/fotoreporter.jpg" alt="FOTOREPORTER">
             </div>
 
-            <div class="BOX-ACAO">
-                <div class="ROTULO"># OBSERVAÇÃO</div>
-                <p class="PERGUNTA-TEXTO">A <span class="OBJETO-FINAL">FOTORREPORTAGEM</span> CONTA UMA HISTÓRIA COM FOTOS.</p>
+            <div class="BLOCO-QUESTAO">
+                <div class="ROTULO"># OBSERVAÇÃO E MARCAÇÃO</div>
+                <p class="PERGUNTA-TEXTO">
+                    1. <span class="ACAO-VERBO">MARQUE</span> O QUE EXPLICA A FOTO:
+                </p>
+                <div class="OPCAO">( &nbsp; ) UMA LEGENDA COM TEXTO CURTO.</div>
+                <div class="OPCAO">( &nbsp; ) UM DESENHO DE FRUTAS.</div>
             </div>
 
-            <div class="BOX-ACAO">
-                <div class="ROTULO"># MARCAÇÃO</div>
-                <p class="PERGUNTA-TEXTO">1. <span class="ACAO-VERBO">MARQUE</span> O QUE EXPLICA A FOTO:</p>
+            <div class="BLOCO-QUESTAO">
+                <div class="ROTULO"># ESCRITA ADAPTADA</div>
+                <p class="PERGUNTA-TEXTO">
+                    2. <span class="ACAO-VERBO">ESCREVA</span> UMA LEGENDA PARA A SUA <span class="OBJETO-FINAL">ESCOLA</span>:
+                </p>
+                <div class="LINHA-PONTILHADA"></div>
+                <div class="LINHA-PONTILHADA"></div>
             </div>
-            <div class="OPCAO">( &nbsp; ) UMA LEGENDA COM TEXTO CURTO.</div>
-            <div class="OPCAO">( &nbsp; ) UM DESENHO DE FRUTAS.</div>
 
-            <div class="BOX-ACAO" style="margin-top: 10px;">
-                <div class="ROTULO"># ESCRITA</div>
-                <p class="PERGUNTA-TEXTO">2. <span class="ACAO-VERBO">ESCREVA</span> UMA LEGENDA PARA UMA FOTO DA <span class="OBJETO-FINAL">ESCOLA</span>:</p>
-            </div>
-            <div class="LINHA-PONTILHADA"></div>
-            <div class="LINHA-PONTILHADA"></div>
-
-            <div class="BOX-ACAO" style="margin-top: 10px;">
+            <div class="BLOCO-QUESTAO">
                 <div class="ROTULO"># OPINIÃO</div>
-                <p class="PERGUNTA-TEXTO">3. <span class="ACAO-VERBO">VOCÊ GOSTA</span> DE NOTÍCIAS COM FOTOS?</p>
+                <p class="PERGUNTA-TEXTO">
+                    3. <span class="ACAO-VERBO">VOCÊ GOSTA</span> DE LER NOTÍCIAS COM FOTOS?
+                </p>
+                <div style="display: flex; gap: 15px;">
+                    <div class="OPCAO" style="flex: 1; text-align: center;">( &nbsp; ) SIM</div>
+                    <div class="OPCAO" style="flex: 1; text-align: center;">( &nbsp; ) NÃO</div>
+                </div>
             </div>
-            <div style="display: flex; gap: 10px;">
-                <div class="OPCAO" style="flex: 1; text-align: center;">SIM</div>
-                <div class="OPCAO" style="flex: 1; text-align: center;">NÃO</div>
-            </div>
-
         </main>
 
         <footer>
             <div class="LINHA-CORES"><div class="COR-1"></div><div class="COR-2"></div><div class="COR-3"></div></div>
-            <div style="font-weight: BOLD; font-size: 9PT;">WWW.LEONARDOPORTAL.COM</div>
+            <div style="font-weight: bold; font-size: 9pt;">WWW.LEONARDOPORTAL.COM</div>
         </footer>
     </div>
 
