@@ -1,0 +1,72 @@
+:root {
+    --VERDE: #76A312;
+    --OCRE: #D4A34D;
+    --MARROM: #634F3D;
+    --PRETO: #000000;
+    --BRANCO: #FFFFFF;
+}
+
+@page { size: A4; margin: 10mm; }
+
+body {
+    font-family: 'VERDANA', SANS-SERIF;
+    margin: 0; padding: 0;
+    background-color: var(--BRANCO);
+    text-transform: UPPERCASE;
+}
+
+.PAGE-CONTAINER {
+    width: 100%;
+    min-height: 280mm;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #EEE;
+    page-break-after: always; /* Importante para juntar os PDFs */
+}
+
+HEADER {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--VERDE);
+}
+
+.AVATAR-IMG {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    border: 3px solid var(--OCRE);
+}
+
+MAIN { flex-grow: 1; padding: 25px; }
+
+.BOX-ACAO {
+    border: 3px solid var(--VERDE);
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.ACAO-VERBO {
+    background-color: var(--VERDE);
+    color: var(--BRANCO);
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+.OBJETO-FINAL {
+    border-bottom: 5px solid var(--OCRE);
+}
+
+FOOTER {
+    margin-top: auto;
+    text-align: CENTER;
+    padding-bottom: 15px;
+}
+
+.LINHA-CORES {
+    display: flex; height: 10px; width: 100%; margin-bottom: 10px;
+}
+.COR-1 { background-color: var(--VERDE); flex: 1; }
+.COR-2 { background-color: var(--OCRE); flex: 1; }
+.COR-3 { background-color: var(--MARROM); flex: 1; }
