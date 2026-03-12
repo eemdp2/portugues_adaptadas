@@ -2,28 +2,99 @@
 <html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css"> <title>PÁGINA 1 - LEONARDO PORTAL</title>
+    <title>APOSTILA COMPLETA - LEONARDO PORTAL</title>
+    <style>
+        /* Estilo para visualização na tela */
+        body {
+            background-color: #525659;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .CONTROLES {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            position: sticky;
+            top: 10px;
+            z-index: 100;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        button {
+            background-color: #76A312; /* Seu Verde */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Container de cada página */
+        .PAGE-WRAPPER {
+            width: 210mm; /* Largura A4 */
+            height: 297mm; /* Altura A4 */
+            background: white;
+            margin-bottom: 20px;
+            border: none;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* REGRAS DE IMPRESSÃO */
+        @media print {
+            body { background: white; padding: 0; }
+            .CONTROLES { display: none; }
+            .PAGE-WRAPPER { 
+                margin: 0; 
+                page-break-after: always; /* Força nova página no PDF */
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="PAGE-CONTAINER">
-        <header>
-            <div style="font-weight: bold;">NOME: __________________________ <br> DATA: ___/___/___</div>
-            <img src="https://lh3.googleusercontent.com/d/AIdro_nUu9F_nqOOyO4BRzzlyyztxVLTvuR0sL8bIbz-MNcitrjr=s900" class="AVATAR-IMG">
-        </header>
 
-        <main>
-            <h1>PARTE 1: IDENTIFICANDO MÍDIAS</h1>
-            <div class="BOX-ACAO">
-                <p style="font-size: 16pt;">
-                    <span class="ACAO-VERBO">CIRCULE</span> ONDE PODEMOS LER UMA <span class="OBJETO-FINAL">NOTÍCIA</span>.
-                </p>
-            </div>
-            </main>
-
-        <footer>
-            <div class="LINHA-CORES"><div class="COR-1"></div><div class="COR-2"></div><div class="COR-3"></div></div>
-            <div>WWW.LEONARDOPORTAL.COM</div>
-        </footer>
+    <div class="CONTROLES">
+        <h2>GERADOR DE APOSTILA - LEONARDO PORTAL</h2>
+        <p>Abaixo estão as páginas carregadas. Clique em imprimir para gerar o PDF único.</p>
+        <button onclick="window.print()">🖨️ IMPRIMIR APOSTILA COMPLETA</button>
     </div>
+
+    <div id="apostila-container">
+        </div>
+
+    <script>
+        const container = document.getElementById('apostila-container');
+        const totalPaginas = 100;
+
+        for (let i = 1; i <= totalPaginas; i++) {
+            // Cria o wrapper da página
+            const wrapper = document.createElement('div');
+            wrapper.className = 'PAGE-WRAPPER';
+
+            // Cria o iframe para carregar p1.html, p2.html...
+            const frame = document.createElement('iframe');
+            frame.src = `p${i}.html`;
+            
+            // Oculta o frame se o arquivo não existir (evita erro 404 visual)
+            frame.onerror = function() {
+                wrapper.style.display = 'none';
+            };
+
+            wrapper.appendChild(frame);
+            container.appendChild(wrapper);
+        }
+    </script>
+
 </body>
 </html>
